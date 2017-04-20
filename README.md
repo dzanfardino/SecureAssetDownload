@@ -1,5 +1,5 @@
 # Secure Asset Download
-#### Version 1.1.1
+#### Version 1.1.2
 
 Secure Asset Download is a simple Craft CMS plugin allowing you, from your templates, to generate download URLs for specified assets that are only available to certain users/groups
 
@@ -26,6 +26,7 @@ Admins have access to all generated URLs regardless of options
   userId: id or array of user ids, // e.g. 6 or [ 17, 28, 30 ]
   userGroupId: id or array of user group ids, // e.g. 3 or [ 1, 99, 76 ]
   forceDownload: true or false, // Optional field to force the download rather than opening in the tab (default: true)
+  public: true or false, // Optional field to allow non-logged in users to download file (default: false)
 }
 ```
 
@@ -86,4 +87,4 @@ _note_: Options are *AND* logic
 
 ## Changelog
 
-[See Releases](https://github.com/nfourtythree/SecureAssetDownload/releases)
+[See Releases](https://github.com/dzanfardino/SecureAssetDownload/releases)

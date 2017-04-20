@@ -11,7 +11,7 @@ class SecureAssetDownloadPlugin extends BasePlugin
 
   function getVersion()
   {
-    return '1.1.1';
+    return '1.1.2';
   }
 
   function getDeveloper()
@@ -26,12 +26,12 @@ class SecureAssetDownloadPlugin extends BasePlugin
 
   public function getDocumentationUrl()
   {
-      return 'https://github.com/nfourtythree/SecureAssetDownload/blob/master/README.md';
+      return 'https://github.com/dzanfardino/SecureAssetDownload/blob/master/README.md';
   }
 
   public function getReleaseFeedUrl()
   {
-      return 'https://raw.githubusercontent.com/nfourtythree/SecureAssetDownload/master/releases.json';
+      return 'https://raw.githubusercontent.com/dzanfardino/SecureAssetDownload/master/releases.json';
   }
 
   public function hasCpSection()

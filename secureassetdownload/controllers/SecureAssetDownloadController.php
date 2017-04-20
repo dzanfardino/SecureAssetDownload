@@ -3,7 +3,9 @@ namespace Craft;
 
 class SecureAssetDownloadController extends BaseController
 {
-	public function actionIndex(array $variables = array())
+    protected $allowAnonymous = true;
+
+    public function actionIndex(array $variables = array())
 	{
 		if ($variables and $variables["crypt"]) {
 			$options = craft()->secureAssetDownload->decodeUrlParam($variables["crypt"]);

@@ -24,6 +24,7 @@ class SecureAssetDownloadService extends BaseApplicationComponent
           'filename' => $criteria['asset']->filename,
           'userId' => (isset($criteria['userId']) ? $criteria['userId'] : null),
           'forceDownload' => ( isset( $criteria['forceDownload'] ) ? $criteria['forceDownload'] : true ),
+          'public' => isset( $criteria['public'] ) ? $criteria['public'] : false,
         ];
 
         if (isset($criteria['userGroupId'])) {
@@ -97,6 +98,13 @@ class SecureAssetDownloadService extends BaseApplicationComponent
 
       if (!$this->_asset) {
         return false;
+      }
+
+      // @dzanfardino added this in order to allow NON logged in users
+      // to download files with public param
+      if (isset($options['public']) && $options['public'] === true)
+      {
+          return true;
       }
 
       if (!craft()->userSession->isLoggedIn()) {
